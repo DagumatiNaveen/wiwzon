@@ -6,7 +6,7 @@ import serviceSocial from "../../assets/images/icons/service-social.svg";
 import serviceSeo from "../../assets/images/icons/service-seo.svg";
 import serviceCloud from "../../assets/images/icons/service-cloud.svg";
 import serviceSecure from "../../assets/images/icons/service-secure.svg";
-
+import { useNavigate } from 'react-router-dom';
 
 function Semiconductor() {
   return (
@@ -22,6 +22,7 @@ function Semiconductor() {
             <div className="col-lg-6 text-center">
               <h2 className="mb-4">Semiconductor</h2>
             </div>
+
           </div>
         </div>
       </div>

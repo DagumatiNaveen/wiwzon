@@ -18,7 +18,7 @@ import product3 from "../../assets/images/portfolio/product-3.jpg";
 import product4 from "../../assets/images/portfolio/product-4.jpg";
 import product5 from "../../assets/images/portfolio/product-5.jpg";
 import product6 from "../../assets/images/portfolio/product-6.jpg";
-
+import { useNavigate } from 'react-router-dom';
 const Home = () => {
   return (
     <>
@@ -61,9 +61,10 @@ const Home = () => {
                       <h4 className="title">
                         <a
                           href="service-details.html"
-                          className="stretched-link"
+                          className="stretched-link" onClick={() => navigate('/RTL_to_GDSII')}
                         >
                           RTL-to-GDSII Implementation
+                         
                         </a>
                       </h4>
                       <p>
@@ -188,7 +189,7 @@ const Home = () => {
         </div>
 
         <section>
-          <div className="container" id="featured">
+          <div className="container why-choose" id="featured">
             <div
               className="section-header"
               data-aos="fade-up"
@@ -196,153 +197,88 @@ const Home = () => {
             >
               <h2>Why Choose Us</h2>
             </div>
-            <div className="row">
-              <div className="col-md-4 left">
-                <div
-                  className="list-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <div className="description">
-                    <h4>Top Layer - The Brain</h4>
-                    <p>Safety-first silicon design for ADAS and EV systems.</p>
+            <div className="row align-items-center g-4">
+              <div className="col-lg-3">
+                <div className="why-choose-block" data-aos="fade-up" data-aos-delay="100">
+                  <div className="why-choose-title-row">
+                    <h4 className="why-choose-title">Top Layer – The Brain</h4>
+                    <img className="why-choose-icon" src={icon1} alt="" />
                   </div>
-                  <div className="icon">
-                    <img src={icon1} alt="icon" />
-                  </div>
+                  <div className="why-choose-subtitle">Intelligence & Observation</div>
+                  <ul className="why-choose-list">
+                    <li>Captures decisions, failures, fixes</li>
+                    <li>Builds persistent engineering memory</li>
+                    <li>Prevents repeated mistakes</li>
+                  </ul>
                 </div>
 
-                <div
-                  className="list-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  <div className="description">
-                    <h4>Image Processing</h4>
-                    <p>High-speed display and sensor pipeline designs.</p>
+                <div className="why-choose-block" data-aos="fade-up" data-aos-delay="200">
+                  <div className="why-choose-title-row">
+                    <h4 className="why-choose-title">Middle Layer – The Accelerator</h4>
+                    <img className="why-choose-icon" src={icon2} alt="" />
                   </div>
-                  <div className="icon">
-                    <img src={icon2} alt="icon" />
-                  </div>
+                  <div className="why-choose-subtitle">AI Augmentation</div>
+                  <ul className="why-choose-list">
+                    <li>AI inside the flow</li>
+                    <li>Guides verification, PPA, compliance</li>
+                    <li>Speeds iteration without replacing tools</li>
+                  </ul>
                 </div>
 
-                <div
-                  className="list-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  <div className="description">
-                    <h4>RF Engineering</h4>
-                    <p>Designs for wireless connectivity (4G/5G).</p>
+                <div className="why-choose-block" data-aos="fade-up" data-aos-delay="300">
+                  <div className="why-choose-title-row">
+                    <h4 className="why-choose-title">Base Layer – The Foundation</h4>
+                    <img className="why-choose-icon" src={icon3} alt="" />
                   </div>
-                  <div className="icon">
-                    <img src={icon3} alt="icon" />
-                  </div>
-                </div>
-
-                <div
-                  className="list-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="400"
-                >
-                  <div className="description">
-                    <h4>High Performance Computing (HPC)</h4>
-                    <p>Compute-intensive silicon for AI servers.</p>
-                  </div>
-                  <div className="icon">
-                    <img src={icon2} alt="icon" />
-                  </div>
+                  <div className="why-choose-subtitle">OSS + Commercial Bridge</div>
+                  <ul className="why-choose-list">
+                    <li>Open-source tools for exploration</li>
+                    <li>Commercial EDA for sign-off</li>
+                    <li>Right tool at the right time</li>
+                  </ul>
                 </div>
               </div>
 
-              <div className="col-md-4 p-4 p-sm-5 center">
-                <div
-                  className="list-center-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <div className="center-icon">
-                    <img src={featuresImg} alt="icon" />
-                  </div>
+              <div className="col-lg-6">
+                <div className="why-choose-visual" data-aos="zoom-in" data-aos-delay="150">
+                  <img src={featuresImg} alt="WIOWIZ layered stack" className="img-fluid" />
                 </div>
               </div>
 
-              <div className="col-md-4 right">
-                <div
-                  className="list-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <div className="icon">
-                    <img src={icon4} alt="icon" />
+              <div className="col-lg-3">
+                <div className="why-choose-block" data-aos="fade-up" data-aos-delay="100">
+                  <div className="why-choose-title-row">
+                    <h4 className="why-choose-title">Lower Cost</h4>
+                    <img className="why-choose-icon" src={icon4} alt="" />
                   </div>
-                  <div className="description">
-                    <h4>Industrial & IoT</h4>
-                    <p>Reliable, low-power chips for smart factories.</p>
-                  </div>
+                  <ul className="why-choose-list">
+                    <li>Reduced license burn</li>
+                    <li>Smarter tool usage</li>
+                  </ul>
                 </div>
 
-                <div
-                  className="list-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <div className="icon">
-                    <img src={icon5} alt="icon" />
+                <div className="why-choose-block" data-aos="fade-up" data-aos-delay="200">
+                  <div className="why-choose-title-row">
+                    <h4 className="why-choose-title">Better Decisions</h4>
+                    <img className="why-choose-icon" src={icon5} alt="" />
                   </div>
-                  <div className="description">
-                    <h4>AI/ML Hardware Acceleration</h4>
-                    <p>Custom accelerators for inference engines.</p>
-                  </div>
+                  <ul className="why-choose-list">
+                    <li>Evidence over assumptions</li>
+                    <li>Risk visible before tapeout</li>
+                  </ul>
                 </div>
 
-                <div
-                  className="list-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  <div className="icon">
-                    <img src={icon6} alt="icon" />
+                <div className="why-choose-block" data-aos="fade-up" data-aos-delay="300">
+                  <div className="why-choose-title-row">
+                    <h4 className="why-choose-title">Continuity</h4>
+                    <img className="why-choose-icon" src={icon6} alt="" />
                   </div>
-                  <div className="description">
-                    <h4>Power Management</h4>
-                    <p>Energy-efficient PMICs and analog solutions.</p>
-                  </div>
-                </div>
-
-                <div
-                  className="list-wrap"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  <div className="icon">
-                    <img
-                      className="defenceIcon"
-                      src={icon2}
-                      alt="icon"
-                    />
-                  </div>
-                  <div className="description">
-                    <h4>Defence</h4>
-                    <p>Rugged and secure silicon systems.</p>
-                  </div>
+                  <ul className="why-choose-list">
+                    <li>Knowledge preserved across stages</li>
+                    <li>No reset at handoffs</li>
+                  </ul>
                 </div>
               </div>
-
-              {/* <!-- <div className="row">s -->
-          <!-- <div className="col-4 offset-4">
-            <div className="list-wrap d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-              data-aos-delay="500">
-              <div className="icon list-center-icon">
-                <img src="assets/images/icons/icon-6.svg" alt="icon"/>
-              </div>
-              <div className="description text-center">
-                <h4>Defence</h4>
-                <p>Rugged and secure silicon systems.</p>
-              </div>
-            </div>
-          </div> -->
-          <!-- </div> --> */}
             </div>
           </div>
         </section>
