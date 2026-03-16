@@ -1,11 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+
 const RTL_to_GDSII = () => {
   return (
-    <div>
-      <p>Site is under constrution , please check back later. <Link to="/">Home</Link></p>
-    </div>
-  )
-}
+    <main style={{ paddingTop: "120px", textAlign: "center" }}>
+      <h2>RTL to GDSII</h2>
+      <p>Site is under construction. Please check back later.</p>
 
-export default RTL_to_GDSII
+      <Link to="/">Go Back Home</Link>
+    </main>
+  );
+};
+
+export default RTL_to_GDSII;

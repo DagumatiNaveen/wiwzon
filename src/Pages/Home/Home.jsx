@@ -19,6 +19,9 @@ import product4 from "../../assets/images/portfolio/product-4.jpg";
 import product5 from "../../assets/images/portfolio/product-5.jpg";
 import product6 from "../../assets/images/portfolio/product-6.jpg";
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import ServiceGrid from '../../Components/ServiceGrid';
+import semiconductorServices from '../../Data/semiconductorServices';
 const Home = () => {
   return (
     <>
@@ -47,143 +50,24 @@ const Home = () => {
               <div className="section-header">
                 <h2>Services We Offer</h2>
               </div>
-              <div className="row gy-4">
-                <div
-                  className="col-xl-4 col-md-4"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <a href="blog-details.html">
-                    <div className="icon-box">
-                      <div className="icon">
-                        <img src={serviceDesign} alt="icon" />
-                      </div>
-                      <h4 className="title">
-                        <a
-                          href="service-details.html"
-                          className="stretched-link" onClick={() => navigate('/RTL_to_GDSII')}
-                        >
-                          RTL-to-GDSII Implementation
-                         
-                        </a>
-                      </h4>
-                      <p>
-                      Full-flow physical implmenatation from RTL synthesis  final to GDSII signoff.
-                      </p>
-                    </div>
-                  </a>
-                </div>
-                {/* <!--End Icon Box --> */}
+              {/* <div className="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
+  <div className="icon-box">
+    <div className="icon">
+      <img src={serviceDesign} alt="icon" />
+    </div>  
 
-                <div
-                  className="col-xl-4 col-md-4"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <div className="icon-box">
-                    <div className="icon">
-                      <img src={serviceHosting} alt="icon" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        Ai-Augmented SoC Verification
-                      </a>
-                    </h4>
-                    <p>Intelligent verification cycles from RTL compliance to coverage signoff.</p>
-                  </div>
-                </div>
+    <h4 className="title">
+      <Link to="/RTL_to_GDSII" className="stretched-link">
+        RTL-to-GDSII Implementation
+      </Link>
+    </h4>
 
-                <div
-                  className="col-xl-4 col-md-4"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  <div className="icon-box">
-                    <div className="icon">
-                      <img src={serviceSocial} alt="icon" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        Pre-Silicon FirmWare & Co-Design
-                      </a>
-                    </h4>
-                    <p>Hardware-Software Co-Design and pre-silicon validation.</p>
-                  </div>
-                </div>
-
-                <div
-                  className="col-xl-4 col-md-4"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <div className="icon-box">
-                    <div className="icon">
-                      <img src={serviceSeo} alt="icon" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        Domain-Specific AI Architecture (RISC-v + NPU)
-                      </a>
-                    </h4>
-                    <p>Custom RISC-V ISA integration with neural acceleration.</p>
-                  </div>
-                </div>
-
-                <div
-                  className="col-xl-4 col-md-4"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <div className="icon-box">
-                    <div className="icon">
-                      <img src={serviceCloud} alt="icon" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        Emulation - Based System Validation
-                      </a>
-                    </h4>
-                    <p>High-fidelity hardware emulation for full-system stress testing.</p>
-                  </div>
-                </div>
-
-                <div
-                  className="col-xl-4 col-md-4"
-                  data-aos="fade-up"
-                  data-aos-delay="500"
-                >
-                  <div className="icon-box">
-                    <div className="icon">
-                      <img src={serviceSecure} alt="icon" />
-                    </div>
-                    <h4 className="title">
-                      <a href="" className="stretched-link">
-                        FPGA-to-ASIC Migration & Prototyping
-                      </a>
-                    </h4>
-                    <p>Transitioning prototypes to production-ready silicon</p>
-                  </div>
-                </div>
-                <div className="row offset-4 mt-4">
-                  <div
-                    className="col-xl-4 col-md-4"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                  >
-                    <div className="icon-box">
-                      <div className="icon">
-                        <img src={serviceSeo} alt="icon" />
-                      </div>
-                      <h4 className="title">
-                        <a href="" className="stretched-link">
-                          UCLE & Chiplet Interconnect Solutions
-                        </a>
-                      </h4>
-                      <p>Moduclar SoC architecture via Die-to-DIE interfaces.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <p>
+      Full-flow physical implementation from RTL synthesis final to GDSII signoff.
+    </p>
+  </div>
+</div> */}
+<ServiceGrid services={semiconductorServices} />
             </div>
           </div>
         </div>
