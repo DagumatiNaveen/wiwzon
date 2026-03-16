@@ -17,11 +17,11 @@ import Semiconductor from "../Pages/Semiconductor/Semiconductor";
 import BlogList from "../Pages/Blog/BlogList";
 import BlogDetails from "../Pages/Blog/BlogDetails";
 import Contact from "../pages/Contact/Contact";
-import NotFound from "../pages/NotFound";
+import NotFound from "../Pages/NotFound";
 import Careers from "../Pages/Careers/Careers";
 import JobDetails from "../Pages/Careers/JobDetails";
 // import Header from "../Components/Header";
-
+import RTL_to_GDSII from "../Pages/Semiconductor/RTL_to_GDSII";
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -41,7 +41,7 @@ const AppRoutes = () => {
         {/* Careers (Dynamic) */}
         <Route path="/careers" element={<Careers />} />
         <Route path="/careers/:jobId" element={<JobDetails />} />
-
+        <Route path="/RTL_to_GDSII" element={<RTL_to_GDSII />} />
         {/* Blog (Dynamic) */}
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blogDetails" element={<BlogDetails />} />
