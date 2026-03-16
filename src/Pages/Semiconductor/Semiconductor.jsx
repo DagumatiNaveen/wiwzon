@@ -7,7 +7,10 @@ import serviceSeo from "../../assets/images/icons/service-seo.svg";
 import serviceCloud from "../../assets/images/icons/service-cloud.svg";
 import serviceSecure from "../../assets/images/icons/service-secure.svg";
 import { useNavigate } from 'react-router-dom';
-import ServiceCard from "../../Components/Servicecard";
+// import ServiceCard from "../../Components/Servicecard";
+// import ServiceCard from "../../Components/ServiceCard";
+import ServiceCard from "../../Components/Servicecard.jsx";
+
 import semiconductorServices from '../../Data/semiconductorServices';
 import ServiceGrid from '../../Components/ServiceGrid';
 
