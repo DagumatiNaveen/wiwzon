@@ -1,6 +1,6 @@
 import React from "react";
-import ServiceCard from "./ServiceCard";
-
+// import ServiceCard from "./ServiceCard";
+import ServiceCard from "./Servicecard.jsx";
 const ServiceGrid = ({ services }) => {
   return (
     <div className="row gy-4">
