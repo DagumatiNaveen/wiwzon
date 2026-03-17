@@ -1,4 +1,8 @@
+
 import React from "react";
+import Particles from "@tsparticles/react";
+import { loadSlim } from "tsparticles-slim";
+import { useCallback } from "react";
 import serviceDesign from "../../assets/images/icons/service-design.svg";
 import serviceHosting from "../../assets/images/icons/service-hosting.svg";
 import serviceSocial from "../../assets/images/icons/service-social.svg";
@@ -22,13 +26,54 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import ServiceGrid from '../../Components/ServiceGrid';
 import semiconductorServices from '../../Data/semiconductorServices';
+
+
 const Home = () => {
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
+  }, []);
+  
   return (
     <>
       <main id="main">
         {/* Hero section with background image */}
-        <section className="hero">
-          <div className="container position-relative">
+        <section className="hero" style={{ position: "relative", overflow: "hidden" }}>
+        <Particles
+  id="tsparticles"
+  init={particlesInit}
+  options={{
+    fullScreen: { enable: false },
+    background: { color: "transparent" },
+    fpsLimit: 60,
+    particles: {
+      number: { value: 80 },
+      color: { value: "#ffffff" },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2
+      },
+      size: {
+        value: 3
+      }
+    }
+  }}
+  style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    zIndex: 0
+  }}
+/>
+          <div className="container position-relative"  style={{ zIndex: 1 }}>
             <div className="row align-items-center">
               <div className="col-lg-6"></div>
               <div className="col-lg-6" style={{ position: 'relative', zIndex: 1 }}>
