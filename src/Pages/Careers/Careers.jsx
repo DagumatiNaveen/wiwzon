@@ -6,9 +6,28 @@ import serviceSocial from "../../assets/images/icons/service-social.svg";
 
 const Careers = () => {
   return (
-    
-    <main id="main">
+    <div>
+ <main id="main">
+ <div className="breadcrumbs">
+      <div className="page-header d-flex align-items-center">
+        <div className="container position-relative">
+          <div className="row d-flex justify-content-center">
+            <div className="col-lg-6 text-center">
+              <h2 className="mb-4">Careers</h2>
+            </div>
 
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div className="container">
+          <ol>
+            <li><Link to="/">Home</Link></li>
+            <li>Careers</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
 <div className="section">
 
   <div className="container position-relative mb-5">
@@ -20,7 +39,7 @@ const Careers = () => {
       <div className="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="100">
         <a href="blog-details.html">
           <div className="icon-box">
-            <div className="icon"><img src="assets/images/icons/service-design.svg" alt="icon" /></div>
+            <div className="icon"><img src={serviceDesign} alt="icon" /></div>
             <h4 className="title"><a href="service-details.html" class="stretched-link">Pioneering Technology</a></h4>
             <p>Work on AI-driven verification and autonomous engineering platforms.</p>
           </div>
@@ -30,7 +49,7 @@ const Careers = () => {
 
       <div className="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="200">
         <div className="icon-box">
-          <div className="icon"><img src="assets/images/icons/service-hosting.svg" alt="icon" /></div>
+          <div className="icon"><img src={serviceHosting} alt="icon" /></div>
           <h4 className="title"><a href="" class="stretched-link">Impact-Driven Culture</a></h4>
           <p>Every idea matters; we’re a team of builders and problem-solvers.</p>
         </div>
@@ -39,7 +58,7 @@ const Careers = () => {
 
       <div className="col-xl-4 col-md-4" data-aos="fade-up" data-aos-delay="500">
         <div className="icon-box">
-          <div className="icon"><img src="assets/images/icons/service-social.svg" alt="icon" /></div>
+          <div className="icon"><img src={serviceSocial} alt="icon" /></div>
           <h4 className="title"><a href="" className="stretched-link">Learning & Growth</a></h4>
           <p>Exposure to semiconductors, AI/ML, and high-impact engineering projects.</p>
         </div>
@@ -129,6 +148,8 @@ const Careers = () => {
 
 </main>
 
+    </div>
+   
     
   )
 };

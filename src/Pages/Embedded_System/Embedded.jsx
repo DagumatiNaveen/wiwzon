@@ -8,6 +8,7 @@ import serviceCloud from "../../assets/images/icons/service-cloud.svg";
 import serviceSecure from "../../assets/images/icons/service-secure.svg";
 
 const Embedded = () => {
+  
   return (
     <div>
       
